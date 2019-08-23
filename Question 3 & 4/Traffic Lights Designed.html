@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
+<script>
+function changeImage()
+{
+image = document.getElementById('imgDisp');
+fileName = document.getElementById('imgDisp').src;
+imageName = fileName.substring(fileName.lastIndexOf('/') + 1);
+	if(imageName == 'redon.png')
+		{image.src = 'redandamberon.png';}
+	if(imageName == 'redandamberon.png')
+		{image.src = 'greenon.png';}
+	if(imageName == 'greenon.png')
+		{image.src = 'amberon.png';}
+	if(imageName == 'amberon.png')
+		{image.src = 'redon.png';}
+}
+</script>
+</head> 
+<body bgcolor=" #33adff">
+<div style="width: 320px; height: 290px; margin: 0 auto;">
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" OnClick='changeImage();'>Change Image</button>
+<br />
+<img id="imgDisp" src="redon.png" />
+</div>
+<script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+</body>
+</html>

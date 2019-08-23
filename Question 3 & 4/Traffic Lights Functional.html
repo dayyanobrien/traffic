@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script>
+function changeImage()
+{
+image = document.getElementById('imgDisp');
+fileName = document.getElementById('imgDisp').src;
+imageName = fileName.substring(fileName.lastIndexOf('/') + 1);
+	if(imageName == 'redon.png')
+		{image.src = 'redandamberon.png';}
+	if(imageName == 'redandamberon.png')
+		{image.src = 'greenon.png';}
+	if(imageName == 'greenon.png')
+		{image.src = 'amberon.png';}
+	if(imageName == 'amberon.png')
+		{image.src = 'redon.png';}
+}
+</script>
+</head> 
+<body>
+<button type="button" OnClick='changeImage();'>Change Image</button>
+<img id="imgDisp" src="redon.png" />
+</body>
+</html>
